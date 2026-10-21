@@ -25,9 +25,9 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap', '404']
 [[params.repos]]
   name   = "interp"
   kind   = "library"
-  status = "released v0.1.0"
+  status = "released v0.2.0"
   href   = "https://github.com/go-approx/interp"
-  blurb  = "Interpolation, splines and smoothing: <code>interp1d</code>, cubic splines with every boundary condition, PCHIP, Akima and makima, B-splines of any degree, FITPACK smoothing splines, least-squares splines, regular-grid and tensor-product interpolation."
+  blurb  = "Interpolation, splines and smoothing: <code>interp1d</code>, cubic splines with every boundary condition, PCHIP, Akima and makima, B-splines of any degree, FITPACK smoothing splines and the legacy <code>splrep</code>, least-squares splines, regular-grid and tensor-product interpolation."
 [[params.repos]]
   name   = "poly"
   kind   = "library"
@@ -48,7 +48,7 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap', '404']
   blurb  = "Logos and icons for the organization, in SVG / PNG / JPG / ICO / ICNS across colour, white and black variants."
 
 # The cards of #exact and their count come from this list. Each statement is
-# from the README of the library it names, at v0.1.0.
+# from the README of the library it names (interp v0.2.0, poly v0.1.0).
 [[params.checks]]
   name = "SciPy and NumPy as oracles"
   what = "SciPy 1.18.1 and NumPy 2.5.4 are run from Go by a tag-gated harness that writes the fixtures; the ordinary tests read them and need no Python. Where SciPy raises, the Go constructor returns an error and the fixture says so. (interp)"
