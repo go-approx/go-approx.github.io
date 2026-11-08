@@ -31,7 +31,7 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap', '404']
 [[params.repos]]
   name   = "poly"
   kind   = "library"
-  status = "released v0.1.0"
+  status = "released v0.1.1"
   href   = "https://github.com/go-approx/poly"
   blurb  = "Polynomials: evaluation (Horner and compensated), arithmetic, least-squares fitting, roots, and the Chebyshev, Legendre, Hermite, HermiteE and Laguerre bases, with the semantics of <code>numpy.polyfit</code>, <code>numpy.roots</code> and <code>numpy.polynomial</code>."
 [[params.repos]]
@@ -48,7 +48,7 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap', '404']
   blurb  = "Logos and icons for the organization, in SVG / PNG / JPG / ICO / ICNS across colour, white and black variants."
 
 # The cards of #exact and their count come from this list. Each statement is
-# from the README of the library it names (interp v0.2.1, poly v0.1.0).
+# from the README of the library it names (interp v0.2.1, poly v0.1.1).
 [[params.checks]]
   name = "SciPy and NumPy as oracles"
   what = "SciPy 1.18.1 and NumPy 2.5.4 are run from Go by a tag-gated harness that writes the fixtures; the ordinary tests read them and need no Python. Where SciPy raises, the Go constructor returns an error and the fixture says so. (interp)"
