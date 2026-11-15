@@ -88,3 +88,9 @@ disableKinds = ['taxonomy', 'term', 'rss', 'sitemap', '404']
   chipFgDark = "#fad2a2"
   statsEnd = "#fdebd6"
   bandText = "#fef2e4"
+
+# The hero's buttons, rendered by landingkit's cta.html in the kit's order.
+[[params.cta]]
+  kind  = "docs"
+  href  = "https://go-approx.github.io/docs/"
+  label = "Read the documentation →"

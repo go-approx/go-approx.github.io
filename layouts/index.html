@@ -19,10 +19,9 @@
   <div class="hero"><div class="wrap">
     <div>
       <h1 class="head">Interpolation and polynomials, in pure Go.<br><span class="accent">Measured against SciPy and NumPy.</span></h1>
-      <p class="sub">go-approx is the approximation layer of the Go scientific stack: <b>interpolation and splines</b> with the semantics of <code>scipy.interpolate</code>, and <b>polynomials</b> with those of <code>numpy.polyfit</code>, <code>numpy.roots</code> and <code>numpy.polynomial</code>. Both libraries run SciPy and NumPy as oracles from their tests and record where they differ. No cgo.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://go-approx.github.io/docs/">{{ partial "icons/book.html" . }}Read the documentation →</a>
-      </div>
+      <p class="sub">go-approx is the approximation layer of the Go scientific stack: <b>interpolation and splines</b> with the semantics of <code>scipy.interpolate</code>, and <b>polynomials</b> with those of <code>numpy.polyfit</code>, <code>numpy.roots</code> and <code>numpy.polynomial</code>. Both libraries run SciPy and NumPy as oracles from their tests and record where they differ. {{ if not (partial "mantra-on.html" $) }}No cgo{{ end }}.</p>
+      {{/* [[params.cta]] in hugo.toml: the kit renders the row */}}
+      {{ partial "cta.html" . }}
       <div class="trust"><span><b>3434/3434</b> polynomial values bit-identical to NumPy</span><span><b>100%</b> statement coverage in poly</span><span><b>CGO=0</b> pure Go</span></div>
     </div>
     <div class="term">
@@ -52,9 +51,9 @@ r, _ := poly.Roots(fit.Coef)         // np.roots</pre>
       <div class="card"><div class="ico">▦</div><h3>Grids</h3><p>Regular-grid interpolation (<code>linear</code> to <code>quintic</code>), tensor-product splines and bicubic interpolation.</p></div>
       <div class="card"><div class="ico">x²</div><h3>Polynomials</h3><p>Evaluation by Horner or compensated Horner, arithmetic, derivatives, integrals, companion-matrix roots.</p></div>
       <div class="card"><div class="ico">📉</div><h3>Fits</h3><p><code>Polyfit</code> with weights, rcond and covariance, and fits in the Chebyshev, Legendre, Hermite, HermiteE and Laguerre bases.</p></div>
-      <div class="card"><div class="ico">📦</div><h3>Pure Go, CGO=0</h3><p>No cgo. <code>poly</code>'s CI runs Linux, macOS, Windows, arm64, and qemu riscv64, loong64, ppc64le, s390x and arm.</p></div>
+      {{ if not (partial "mantra-on.html" $) }}<div class="card"><div class="ico">📦</div><h3>Pure Go, CGO=0</h3><p>{{ if not (partial "mantra-on.html" $) }}No cgo.{{ end }} <code>poly</code>'s CI runs Linux, macOS, Windows, arm64, and qemu riscv64, loong64, ppc64le, s390x and arm.</p></div>{{ end }}
       <div class="card"><div class="ico">🧭</div><h3>Planned</h3><p>Chebyshev approximation and AAA rational approximation are not written yet.</p></div>
-      <div class="card"><div class="ico">⚖️</div><h3>BSD-3-Clause</h3><p>Every repository of the organization. Ported code keeps its attribution in place.</p></div>
+      {{ if not (partial "mantra-on.html" $) }}<div class="card"><div class="ico">⚖️</div><h3>BSD-3-Clause</h3><p>Every repository of the organization. Ported code keeps its attribution in place.</p></div>{{ end }}
     </div>
   </div></section>
 
@@ -90,6 +89,6 @@ r, _ := poly.Roots(fit.Coef)         // np.roots</pre>
     </div>
   </div></section>
 
-  <footer><div class="wrap"><span>go-approx · <a href="https://github.com/go-approx">go-approx on GitHub</a> · BSD-3-Clause</span><span>points in · curves out</span></div></footer>
+  <footer><div class="wrap"><span>go-approx · <a href="https://github.com/go-approx">go-approx on GitHub</a>{{ if not (partial "mantra-on.html" $) }} · BSD-3-Clause{{ end }}</span><span>points in · curves out</span></div></footer>
 </body>
 </html>
